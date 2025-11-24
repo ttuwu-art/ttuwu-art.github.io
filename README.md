@@ -1,112 +1,184 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ttuwu — 3D Gallery</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ttuwu — Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
 
-<style>
+  <!-- Model Viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <style>
     body {
-        background:#000;
-        color:#4aa3ff;
-        font-family:'Inter', sans-serif;
-        margin:0;
-        padding:20px;
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #4aa3ff;
+      font-family: 'Inter', sans-serif;
+      padding-left: 10px;
     }
 
-    h1 { margin-bottom:10px; }
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #4aa3ff;
+      margin-top: 20px;
+    }
 
-    /* ----- GALLERY ----- */
-    .gallery {
-        display:flex;
-        flex-direction:column;
-        gap:40px;
-        margin-top:20px;
+    .viewer-container {
+      width: 65%; /* 1/3 más pequeño */
+      height: 300px;
+      margin: 20px 0;
     }
 
     model-viewer {
-        width: 300px;
-        height: 300px;
-        background:#000;
+      width: 100%;
+      height: 100%;
+      background-color: #000 !important;
     }
 
-    /* ----- HAMBURGER MENU ----- */
+    .contact {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .btn {
+      background: #444;
+      color: #4aa3ff;
+      padding: 10px 14px;
+      border-radius: 6px;
+      width: fit-content;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* ---- NAV ---- */
     .menu-btn {
-        width:35px;
-        cursor:pointer;
-        margin-bottom:20px;
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      width: 32px;
+      height: 24px;
+      cursor: pointer;
+      z-index: 999;
     }
 
-    .bar {
-        height:4px;
-        background:#4aa3ff;
-        margin:6px 0;
-        width:100%;
-        transition:.3s;
+    .menu-btn div {
+      width: 100%;
+      height: 4px;
+      background: #4aa3ff;
+      margin: 4px 0;
+      transition: 0.3s;
     }
 
-    /* ----- SIDE MENU ----- */
-    #sideMenu {
-        position:fixed;
-        top:0;
-        left:-250px;
-        width:250px;
-        height:100%;
-        background:#000;
-        border-right:1px solid #4aa3ff;
-        padding:40px 20px;
-        transition:0.3s ease;
+    /* Menu panel */
+    .menu-panel {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100vh;
+      background: #111;
+      padding: 40px 20px;
+      transition: 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      z-index: 998;
     }
 
-    #sideMenu a {
-        display:block;
-        color:#4aa3ff;
-        text-decoration:none;
-        margin:15px 0;
-        font-size:18px;
+    .menu-panel a {
+      color: #4aa3ff;
+      font-size: 18px;
+      text-decoration: none;
     }
 
-    #sideMenu.open {
-        left:0;
+    .menu-open .menu-panel {
+      right: 0;
     }
-</style>
 
-<script>
-function toggleMenu() {
-    document.getElementById("sideMenu").classList.toggle("open");
-}
-</script>
+    .menu-open .menu-btn div:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
 
-<!-- Model Viewer -->
-<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
+    .menu-open .menu-btn div:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-open .menu-btn div:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- MENU BUTTON -->
-<div class="menu-btn" onclick="toggleMenu()">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-</div>
+  <!-- MENU BUTTON -->
+  <div class="menu-btn" id="menuBtn">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
-<!-- SIDE MENU -->
-<div id="sideMenu">
-    <a href="imagen.html">Imagen / 画像</a>
-    <a href="sonido.html">Sonido / 音</a>
-    <a href="video.html">Video / ビデオ</a>
-    <a href="procesos.html">Procesos / プロセス</a>
-</div>
+  <!-- MENU PANEL -->
+  <nav class="menu-panel" id="menuPanel">
+    <a href="#imagen">Imagen / 画像</a>
+    <a href="#sonido">Sonido / 音</a>
+    <a href="#video">Video / 映像</a>
+    <a href="#procesos">Procesos / プロセス</a>
+  </nav>
 
-<h1>Galería 3D / 3Dギャラリー</h1>
+  <h1>ttuwu — Portfolio</h1>
 
-<div class="gallery">
-    <model-viewer src="models/model1.glb" auto-rotate camera-controls></model-viewer>
-    <model-viewer src="models/model2.glb" auto-rotate camera-controls></model-viewer>
-    <model-viewer src="models/model3.glb" auto-rotate camera-controls></model-viewer>
-</div>
+  <!-- MODEL 1 -->
+  <section id="imagen">
+    <h2>Imagen / 画像</h2>
+    <div class="viewer-container">
+      <model-viewer src="model1.glb" auto-rotate camera-controls></model-viewer>
+    </div>
+  </section>
+
+  <!-- MODEL 2 -->
+  <section id="sonido">
+    <h2>Sonido / 音</h2>
+    <div class="viewer-container">
+      <model-viewer src="model2.glb" auto-rotate camera-controls></model-viewer>
+    </div>
+  </section>
+
+  <!-- MODEL 3 -->
+  <section id="video">
+    <h2>Video / 映像</h2>
+    <div class="viewer-container">
+      <model-viewer src="model3.glb" auto-rotate camera-controls></model-viewer>
+    </div>
+  </section>
+
+  <section id="procesos">
+    <h2>Procesos / プロセス</h2>
+    <p>Documentación de procesos creativos, pruebas, bocetos y exploraciones.</p>
+  </section>
+
+  <div class="contact">
+    <a class="btn" href="https://instagram.com/ttuwu_________________________">Instagram / インスタ</a>
+    <a class="btn" href="https://wa.me/525533677056">WhatsApp / ワッツアップ</a>
+    <a class="btn" href="mailto:correo@example.com">Correo / メール</a>
+  </div>
+
+  <script>
+    const btn = document.getElementById("menuBtn");
+    document.addEventListener("click", (e) => {
+      if (btn.contains(e.target)) {
+        document.body.classList.toggle("menu-open");
+      } else {
+        document.body.classList.remove("menu-open");
+      }
+    });
+  </script>
 
 </body>
 </html>
