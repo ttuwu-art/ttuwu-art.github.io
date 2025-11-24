@@ -1,5 +1,4 @@
-este es un espacio que recibe actualizaciones en tiempo real
-este es un portal que se dirige a...
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -19,7 +18,7 @@ este es un portal que se dirige a...
     }
 
     h2 {
-      margin: 0 0 12px 0;
+      margin: 40px 0 12px 0; /* 🔥 antes era 0 — ahora dos líneas extra */
       font-weight: normal;
     }
 
@@ -50,16 +49,16 @@ este es un portal que se dirige a...
 
     .btn {
       display: block;
-      margin: 12px 0;
-      padding: 14px 20px;
-      width: 240px;
+      margin: 20px 0;          /* 🔥 más espacio entre botones */
+      padding: 20px 24px;      /* 🔥 botones más grandes y cómodos */
+      width: 260px;
       text-align: left;
       border-radius: 8px;
       background: #333;
       color: #3a86ff;
       text-decoration: none;
       border: 1px solid #555;
-      font-size: 16px;
+      font-size: 17px;
       transition: 0.2s;
     }
 
@@ -87,7 +86,6 @@ este es un portal que se dirige a...
       transition: 0.3s;
     }
 
-    /* Side menu */
     #sideMenu {
       position: fixed;
       top: 0;
