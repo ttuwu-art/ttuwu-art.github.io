@@ -24,12 +24,18 @@
     h1 {
       font-size: 22px;
       font-weight: 600;
-      color: #4aa3ff;
       margin-top: 20px;
+      color: #4aa3ff;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-weight: 400;
+      color: #4aa3ff;
     }
 
     .viewer-container {
-      width: 65%; /* 1/3 más pequeño */
+      width: 65%; /* más pequeño */
       height: 300px;
       margin: 20px 0;
     }
@@ -57,7 +63,7 @@
       font-size: 14px;
     }
 
-    /* ---- NAV ---- */
+    /* MENU HAMBURGUESA */
     .menu-btn {
       position: fixed;
       top: 15px;
@@ -76,7 +82,6 @@
       transition: 0.3s;
     }
 
-    /* Menu panel */
     .menu-panel {
       position: fixed;
       top: 0;
@@ -117,51 +122,37 @@
 </head>
 <body>
 
-  <!-- MENU BUTTON -->
+  <!-- MENU ICON -->
   <div class="menu-btn" id="menuBtn">
     <div></div>
     <div></div>
     <div></div>
   </div>
 
-  <!-- MENU PANEL -->
+  <!-- MENU PANEL (SUBPÁGINAS) -->
   <nav class="menu-panel" id="menuPanel">
-    <a href="#imagen">Imagen / 画像</a>
-    <a href="#sonido">Sonido / 音</a>
-    <a href="#video">Video / 映像</a>
-    <a href="#procesos">Procesos / プロセス</a>
+    <a href="imagen.html">Imagen / 画像</a>
+    <a href="sonido.html">Sonido / 音</a>
+    <a href="video.html">Video / 映像</a>
+    <a href="procesos.html">Procesos / プロセス</a>
   </nav>
 
   <h1>ttuwu — Portfolio</h1>
 
-  <!-- MODEL 1 -->
-  <section id="imagen">
-    <h2>Imagen / 画像</h2>
-    <div class="viewer-container">
-      <model-viewer src="model1.glb" auto-rotate camera-controls></model-viewer>
-    </div>
-  </section>
+  <h2>Modelo 1</h2>
+  <div class="viewer-container">
+    <model-viewer src="model1.glb" auto-rotate camera-controls></model-viewer>
+  </div>
 
-  <!-- MODEL 2 -->
-  <section id="sonido">
-    <h2>Sonido / 音</h2>
-    <div class="viewer-container">
-      <model-viewer src="model2.glb" auto-rotate camera-controls></model-viewer>
-    </div>
-  </section>
+  <h2>Modelo 2</h2>
+  <div class="viewer-container">
+    <model-viewer src="model2.glb" auto-rotate camera-controls></model-viewer>
+  </div>
 
-  <!-- MODEL 3 -->
-  <section id="video">
-    <h2>Video / 映像</h2>
-    <div class="viewer-container">
-      <model-viewer src="model3.glb" auto-rotate camera-controls></model-viewer>
-    </div>
-  </section>
-
-  <section id="procesos">
-    <h2>Procesos / プロセス</h2>
-    <p>Documentación de procesos creativos, pruebas, bocetos y exploraciones.</p>
-  </section>
+  <h2>Modelo 3</h2>
+  <div class="viewer-container">
+    <model-viewer src="model3.glb" auto-rotate camera-controls></model-viewer>
+  </div>
 
   <div class="contact">
     <a class="btn" href="https://instagram.com/ttuwu_________________________">Instagram / インスタ</a>
