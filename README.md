@@ -1,4 +1,3 @@
-# ttuwu-art.github.io
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,24 +12,29 @@
     body {
       margin: 0;
       background: #000;
-      color: #fff;
+      color: #3a86ff; /* azul */
       font-family: Arial, sans-serif;
       overflow-x: hidden;
+      padding-left: 10px; /* alineación izquierda */
+    }
+
+    h2 {
+      text-align: left;
+      margin-left: 0;
     }
 
     .container {
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 100px;
-      padding: 40px 0;
+      gap: 80px;
+      padding: 50px 0;
     }
 
     .item {
       width: 100%;
       max-width: 800px;
-      margin: auto;
-      text-align: center;
+      margin-left: 0;
     }
 
     model-viewer {
@@ -41,22 +45,22 @@
     }
 
     .contacto {
-      text-align: center;
       margin-top: 80px;
       margin-bottom: 60px;
+      text-align: left;
     }
 
     .btn {
       display: block;
-      margin: 10px auto;
+      margin: 12px 0;
       padding: 14px 22px;
-      width: 220px;
-      text-align: center;
+      width: 240px;
+      text-align: left;
       border-radius: 8px;
-      background: #222;
-      color: #fff;
+      background: #2b2b2b;   /* gris */
+      color: #3a86ff;        /* azul */
       text-decoration: none;
-      border: 1px solid #444;
+      border: 1px solid #555;
       font-size: 16px;
       transition: 0.2s;
     }
@@ -72,26 +76,31 @@
   <div class="container">
 
     <div class="item">
-      <h2>Modelo 1</h2>
+      <h2>Modelo 1 / モデル1</h2>
       <model-viewer src="modelo1.glb" camera-controls auto-rotate disable-zoom="false"></model-viewer>
     </div>
 
     <div class="item">
-      <h2>Modelo 2</h2>
+      <h2>Modelo 2 / モデル2</h2>
       <model-viewer src="modelo2.glb" camera-controls auto-rotate disable-zoom="false"></model-viewer>
     </div>
 
     <div class="item">
-      <h2>Modelo 3</h2>
+      <h2>Modelo 3 / モデル3</h2>
       <model-viewer src="modelo3.glb" camera-controls auto-rotate disable-zoom="false"></model-viewer>
     </div>
 
   </div>
 
   <div class="contacto">
-    <h2>Contacto</h2>
 
-    <a class="btn" href="https://wa.me/521XXXXXXXXXX" target="_blank">WhatsApp</a>
-    <a class="btn" href="mailto:tucorreo@gmail.com" target="_blank">Correo</a>
-    <a class="btn" href="https://instagram.com/TUUSUARIO" target="_blank">Instagram</a>
-    <a class="btn" href="https://linktr.ee/TUUSUARIO" target="_blank">Otras redes</a>
+    <h2>Contacto / 連絡先</h2>
+
+    <a class="btn" href="https://wa.me/5215533677056" target="_blank">WhatsApp / ワッツアップ</a>
+    <a class="btn" href="mailto:tucorreo@gmail.com" target="_blank">Correo / メール</a>
+    <a class="btn" href="https://instagram.com/ttuwu_________________________" target="_blank">Instagram / インスタグラム</a>
+
+  </div>
+
+</body>
+</html>
