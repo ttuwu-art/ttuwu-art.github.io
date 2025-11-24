@@ -12,9 +12,9 @@
     body {
       margin: 0;
       background: #000;
-      color: #3a86ff; /* azul */
+      color: #3a86ff;
       font-family: Arial, sans-serif;
-      padding-left: 10px; /* alineado a la izquierda */
+      padding-left: 10px;
     }
 
     h2 {
@@ -37,8 +37,8 @@
 
     model-viewer {
       width: 100%;
-      height: 330px; /* 🔥 un tercio más pequeño */
-      background: #000 !important; /* 🔥 negro puro */
+      height: 330px;
+      background: #000 !important;
       border-radius: 10px;
     }
 
@@ -54,8 +54,8 @@
       width: 240px;
       text-align: left;
       border-radius: 8px;
-      background: #333;   /* gris */
-      color: #3a86ff;     /* azul */
+      background: #333;
+      color: #3a86ff;
       text-decoration: none;
       border: 1px solid #555;
       font-size: 16px;
@@ -65,10 +65,79 @@
     .btn:hover {
       background: #444;
     }
+
+    /* ------------------ HAMBURGER MENU ------------------ */
+
+    .hamburger {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      width: 35px;
+      height: 30px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .hamburger div {
+      width: 100%;
+      height: 4px;
+      background: #3a86ff;
+      margin: 6px 0;
+      transition: 0.3s;
+    }
+
+    /* Side menu */
+    #sideMenu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 230px;
+      height: 100%;
+      background: #000;
+      border-right: 1px solid #3a86ff;
+      padding: 40px 20px;
+      transition: 0.3s ease;
+      z-index: 9;
+    }
+
+    #sideMenu a {
+      display: block;
+      color: #3a86ff;
+      text-decoration: none;
+      margin: 20px 0;
+      font-size: 18px;
+    }
+
+    #sideMenu.open {
+      left: 0;
+    }
+
   </style>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+    }
+  </script>
+
 </head>
 
 <body>
+
+  <!-- HAMBURGER BUTTON -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- SIDE MENU -->
+  <div id="sideMenu">
+    <a href="imagen.html">Imagen / 画像</a>
+    <a href="sonido.html">Sonido / 音</a>
+    <a href="video.html">Video / ビデオ</a>
+    <a href="procesos.html">Procesos / プロセス</a>
+  </div>
 
   <div class="container">
 
