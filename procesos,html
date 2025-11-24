@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Procesos / プロセス</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+
+<style>
+  body { 
+    background:#000; 
+    color:#4aa3ff; 
+    font-family:'Inter', sans-serif; 
+    padding:20px; 
+  }
+  a { color:#4aa3ff; text-decoration:none; }
+</style>
+</head>
+
+<body>
+
+<a href="index.html">← Regresar / 戻る</a>
+
+<h1>Procesos / プロセス</h1>
+<p>Sección para mostrar WIPs, breakdowns, experimentos y documentación de tus obras.</p>
+
+</body>
+</html>
