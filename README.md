@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+este es un espacio que recibe actualizaciones en tiempo real
+este es un portal que se dirige a...
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
