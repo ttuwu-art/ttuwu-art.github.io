@@ -1,28 +1,32 @@
+<html lang="es">
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
-    /* RESET BÁSICO */
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
     body {
+      margin: 0;
       background: #000;
       color: #fff;
       font-family: Arial, Helvetica, sans-serif;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
+      justify-content: center;
     }
 
-    /* CONTENIDO CON FADE IN */
+    .container {
+      width: 100%;
+      max-width: 900px;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    /* FADE IN SUAVE */
     .fade {
       opacity: 0;
-      animation: fadeIn 1.6s ease-out forwards;
+      animation: fadeIn 1.4s ease-out forwards;
     }
 
     @keyframes fadeIn {
@@ -37,54 +41,65 @@
     }
 
     h1 {
-      margin-top: 80px;
-      margin-bottom: 60px;
+      margin-top: 140px;   /* ESPACIO GRANDE ARRIBA */
+      margin-bottom: 120px;
       font-size: 48px;
       font-weight: normal;
-      color: #2f6bff;
+      color: #3b6cff;
+    }
+
+    .soundcloud,
+    .spotify {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      border: none;
     }
 
     .soundcloud {
-      width: 100%;
-      max-width: 700px;
+      margin-bottom: 140px; /* SEPARACIÓN GRANDE */
+    }
+
+    iframe {
+      border: none;
+      outline: none;
     }
 
     .spacer {
-      height: 300px;
+      height: 320px;
     }
   </style>
+</head>
+
 <body>
+  <div class="container fade">
 
-  <div class="soundcloud fade">
-    <iframe
-      width="100%"
-      height="166"
-      scrolling="no"
-      frameborder="no"
-      allow="autoplay"
-      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2229331223&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-    </iframe>
+    <h1>ttuwu</h1>
 
-    <div style="
-      font-size: 10px;
-      color: #cccccc;
-      line-break: anywhere;
-      word-break: normal;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-      font-weight: 100;
-    ">
-      <a href="https://soundcloud.com/mauricio-rosas-hernandez" target="_blank" style="color:#cccccc; text-decoration:none;">
-        Mauricio Rosas-Hernández
-      </a>
-      ·
-      <a href="https://soundcloud.com/mauricio-rosas-hernandez/marcha-x-palestina00095900" target="_blank" style="color:#cccccc; text-decoration:none;">
-        marcha x palestina00095900
-      </a>
+    <!-- SOUNDCLOUD -->
+    <div class="soundcloud">
+      <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2229331223&auto_play=true">
+      </iframe>
     </div>
-  </div>
 
-  <div class="spacer"></div>
+    <!-- SPOTIFY -->
+    <div class="spotify">
+      <iframe
+        src="https://open.spotify.com/embed/playlist/499zQTxAALSLh6x1tsryxn"
+        width="100%"
+        height="352"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <div class="spacer"></div>
+
+  </div>
 </body>
+</html>
