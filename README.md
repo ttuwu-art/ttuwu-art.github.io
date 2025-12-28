@@ -74,7 +74,6 @@
 <body>
   <div class="container fade">
 
-    <h1>ttuwu</h1>
 
     <!-- SOUNDCLOUD -->
     <div class="soundcloud">
