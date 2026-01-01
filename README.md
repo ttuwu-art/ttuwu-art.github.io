@@ -23,7 +23,7 @@
       text-align: center;
     }
 
-    /* FADE IN SUAVE */
+    /* FADE IN */
     .fade {
       opacity: 0;
       animation: fadeIn 1.4s ease-out forwards;
@@ -42,31 +42,22 @@
 
     h1 {
       margin-top: 140px;
-      margin-bottom: 120px;
+      margin-bottom: 140px;
       font-size: 48px;
       font-weight: normal;
-      color: #3b6cff;
-    }
-
-    .soundcloud,
-    .spotify {
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .soundcloud {
-      margin-bottom: 160px; /* separación clara */
+      color: #3a86ff;
     }
 
     iframe {
       border: none;
       outline: none;
       display: block;
+      border-radius: 12px;
     }
 
-    .spacer {
-      height: 320px;
+    .block {
+      max-width: 700px;
+      margin: 0 auto 220px auto; /* aire grande */
     }
   </style>
 </head>
@@ -75,7 +66,8 @@
   <div class="container fade">
 
     <!-- SOUNDCLOUD -->
-    <div class="soundcloud">
+        <h2>un a marcha en la cdmx el otoño de 2025</h2>
+    <div class="block">
       <iframe
         width="100%"
         height="166"
@@ -85,10 +77,11 @@
       </iframe>
     </div>
 
-    <!-- SPOTIFY -->
-    <div class="spotify">
+    <!-- SPOTIFY 1 -->
+  
+    <div class="block">
       <iframe
-        src="https://open.spotify.com/embed/playlist/6xnl7nTO7iiw4xqfMluyMy"
+        src="https://open.spotify.com/embed/playlist/499zQTxAALSLh6x1tsryxn?utm_source=generator"
         width="100%"
         height="352"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -96,14 +89,16 @@
       </iframe>
     </div>
 
-    <div class="spacer"></div>
-
-  </div>
-</body>
-</html>
-
-
-    <div class="spacer"></div>
+    <!-- SPOTIFY 2 (AGREGADO, NO SUSTITUYE) -->
+    <div class="block">
+      <iframe
+        src="https://open.spotify.com/embed/playlist/6xnl7nTO7iiw4xqfMluyMy?utm_source=generator"
+        width="100%"
+        height="352"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
 
   </div>
 </body>
