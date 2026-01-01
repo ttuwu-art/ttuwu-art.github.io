@@ -1,6 +1,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <title>ttuwu</title>
 
   <style>
     * {
@@ -10,7 +11,6 @@
     body {
       margin: 0;
       background: #000;
-      color: #fff;
       font-family: Arial, Helvetica, sans-serif;
       display: flex;
       justify-content: center;
@@ -41,7 +41,7 @@
     }
 
     h1 {
-      margin-top: 140px;   /* ESPACIO GRANDE ARRIBA */
+      margin-top: 140px;
       margin-bottom: 120px;
       font-size: 48px;
       font-weight: normal;
@@ -53,16 +53,16 @@
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
-      border: none;
     }
 
     .soundcloud {
-      margin-bottom: 140px; /* SEPARACIÓN GRANDE */
+      margin-bottom: 160px; /* separación clara */
     }
 
     iframe {
       border: none;
       outline: none;
+      display: block;
     }
 
     .spacer {
@@ -73,7 +73,6 @@
 
 <body>
   <div class="container fade">
-
 
     <!-- SOUNDCLOUD -->
     <div class="soundcloud">
@@ -89,13 +88,20 @@
     <!-- SPOTIFY -->
     <div class="spotify">
       <iframe
-        src="https://open.spotify.com/embed/playlist/499zQTxAALSLh6x1tsryxn"
+        src="https://open.spotify.com/embed/playlist/6xnl7nTO7iiw4xqfMluyMy"
         width="100%"
         height="352"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy">
       </iframe>
     </div>
+
+    <div class="spacer"></div>
+
+  </div>
+</body>
+</html>
+
 
     <div class="spacer"></div>
 
