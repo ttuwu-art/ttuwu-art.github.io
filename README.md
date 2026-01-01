@@ -66,7 +66,6 @@
   <div class="container fade">
 
     <!-- SOUNDCLOUD -->
-        <h2>un a marcha en la cdmx el otoño de 2025</h2>
     <div class="block">
       <iframe
         width="100%"
@@ -78,7 +77,6 @@
     </div>
 
     <!-- SPOTIFY 1 -->
-  
     <div class="block">
       <iframe
         src="https://open.spotify.com/embed/playlist/499zQTxAALSLh6x1tsryxn?utm_source=generator"
