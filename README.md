@@ -41,7 +41,7 @@
     }
 
     h1 {
-      margin-top: 140px;
+      margin-top: 180px; /* espacio extra arriba */
       margin-bottom: 140px;
       font-size: 48px;
       font-weight: normal;
@@ -57,7 +57,11 @@
 
     .block {
       max-width: 700px;
-      margin: 0 auto 220px auto; /* aire grande */
+      margin: 0 auto 220px auto; /* separación grande */
+    }
+
+    .sc-caption {
+      display: none; /* oculta texto extra de SoundCloud */
     }
   </style>
 </head>
@@ -65,7 +69,18 @@
 <body>
   <div class="container fade">
 
-    <!-- SOUNDCLOUD -->
+    <!-- SOUNDCLOUD NUEVO (ARRIBA DE TODO) -->
+    <div class="block">
+      <iframe
+        width="100%"
+        height="300"
+        scrolling="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2254157330&auto_play=true&visual=true">
+      </iframe>
+    </div>
+
+    <!-- SOUNDCLOUD ORIGINAL -->
     <div class="block">
       <iframe
         width="100%"
@@ -87,7 +102,7 @@
       </iframe>
     </div>
 
-    <!-- SPOTIFY 2 (AGREGADO, NO SUSTITUYE) -->
+    <!-- SPOTIFY 2 -->
     <div class="block">
       <iframe
         src="https://open.spotify.com/embed/playlist/6xnl7nTO7iiw4xqfMluyMy?utm_source=generator"
